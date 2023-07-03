@@ -41,7 +41,9 @@ lsp.set_preferences({
 lsp.on_attach(function(client, bufnr)
   local opts = {buffer = bufnr, remap = false}
 
+  -- (g)o to (d)efinition
   vim.keymap.set("n", "gd", function() vim.lsp.buf.definition() end, opts)
+  -- Function hints similar to ctrl + space
   vim.keymap.set("n", "K", function() vim.lsp.buf.hover() end, opts)
   vim.keymap.set("n", "<leader>vws", function() vim.lsp.buf.workspace_symbol() end, opts)
   vim.keymap.set("n", "<leader>vd", function() vim.diagnostic.open_float() end, opts)

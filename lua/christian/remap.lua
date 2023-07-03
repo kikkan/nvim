@@ -71,5 +71,14 @@ vim.keymap.set("n", "<C-s>", function ()
     vim.cmd("w")
 end)
 
+-- (e)xecute (p)ython. (yes, its not an exe but "rn" was taken.
+vim.keymap.set("n", "<leader>ep", ":w<leader>!python")
+
+-- Visual block
+vim.keymap.set("n", "<leader>v", "<c-v>")
+
+
+
+
 
 
