@@ -20,7 +20,7 @@ return require('packer').startup(function(use)
         end
     })
 
-    use( 'nvim-treesitter/nvim-treesitter', {run = ':TSUpdate'})
+    use('nvim-treesitter/nvim-treesitter', {run = ':TSUpdate'})
     use('nvim-treesitter/playground')
     use('theprimeagen/harpoon')
     use('mbbill/undotree')
@@ -48,7 +48,34 @@ return require('packer').startup(function(use)
 		    {'rafamadriz/friendly-snippets'},
 	    }
     }
-  -- transparent background
+
+    -- Other packages from other sources than theprimeagen:
+    -- Startup page and icons.
+    use {
+        'goolord/alpha-nvim',
+        requires = { 'nvim-tree/nvim-web-devicons' },
+        config = function ()
+            require'alpha'.setup(require'alpha.themes.startify'.config)
+        end
+    }
+    -- Git status bar on the left side
+    use 'airblade/vim-gitgutter'
+
+    -- Changes bottom informasjon bar "mode" "branch" etc.
+    use {
+        'nvim-lualine/lualine.nvim',
+        requires = { 'nvim-tree/nvim-web-devicons', opt = true }
+    }
+
+    -- Multiple cursors
+    use 'mg979/vim-visual-multi'
+
+    -- File navigation like vimium
+    use 'folke/flash.nvim'
+
+    -- transparent background
     -- use 'xiyaowong/transparent.nvim'
 end)
+
+-- Needed for some reason
 

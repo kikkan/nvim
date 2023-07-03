@@ -41,8 +41,8 @@ vim.keymap.set("n", "<C-f>", "<cmd>silent !tmux neww tmux-sessionizer<CR>")
 vim.keymap.set("n", "<leader>f", vim.lsp.buf.format)
 
 -- quickfix:
-vim.keymap.set("n", "<C-k>", "<cmd>cnext<CR>zz")
-vim.keymap.set("n", "<C-j>", "<cmd>cprev<CR>zz")
+--vim.keymap.set("n", "<C-k>", "<cmd>cnext<CR>zz")
+--vim.keymap.set("n", "<C-j>", "<cmd>cprev<CR>zz")
 vim.keymap.set("n", "<leader>k", "<cmd>lnext<CR>zz")
 vim.keymap.set("n", "<leader>j", "<cmd>lprev<CR>zz")
 
@@ -61,10 +61,15 @@ vim.keymap.set("n", "<leader><leader>", function()
 end)
 
 -- My remaps
-vim.keymap.set("n", "<leader>nh", ":nohlsearch<cr>")
+vim.keymap.set("n", "<leader>nh", function() vim.cmd("nohlsearch") end) -- Removes highlighting
+
+
 vim.keymap.set("i", "<C-s>", "<Esc>:w<cr>")
--- Not sure which of the two below are best. None work in .py tho.
--- vim.keymap.set("n", "<C-s>", ":w<cr>")
-vim.keymap.set("n", "<C-s>", "<cmd>w<cr>")
+--vim.keymap.set("n", "<C-s>", "<cmd>w")
+--vim.keymap.set("n", "<C-s>", ":w<cr>")
+vim.keymap.set("n", "<C-s>", function ()
+    vim.cmd("w")
+end)
+
 
 
