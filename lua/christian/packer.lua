@@ -71,7 +71,10 @@ return require('packer').startup(function(use)
     use 'mg979/vim-visual-multi'
 
     -- File navigation like vimium
-    use 'folke/flash.nvim'
+    use {
+        'folke/flash.nvim',
+        config = function() require('flash').setup() end
+    }
 
     -- transparent background
     -- use 'xiyaowong/transparent.nvim'
