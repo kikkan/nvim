@@ -10,7 +10,6 @@ return require('packer').startup(function(use)
 	    requires = { {'nvim-lua/plenary.nvim'} }
     }
 
-    
     -- The theme
     use({
         'rose-pine/neovim',
@@ -71,11 +70,17 @@ return require('packer').startup(function(use)
     use 'mg979/vim-visual-multi'
 
     -- File navigation like vimium
-    use {'folke/flash.nvim'}
+    use {
+        'folke/flash.nvim',
+        -- Trying these settings to get remote and treesitter working.
+        require("flash").setup({})
+    }
+
+    -- Copilot
+    -- use("github/copilot.vim")
 
     -- transparent background
     -- use 'xiyaowong/transparent.nvim'
 end)
 
--- Needed for some reason
 
