@@ -11,7 +11,7 @@ vim.opt.expandtab = true
 
 vim.opt.smartindent = true
 
-vim.opt.wrap = false
+vim.opt.wrap = true
 
 -- allows undotree to keep track of changes
 vim.opt.swapfile = false
