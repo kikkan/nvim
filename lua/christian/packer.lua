@@ -43,6 +43,7 @@ return require('packer').startup(function(use)
 		    {'neovim/nvim-lspconfig'},
 		    {'williamboman/mason.nvim'},
 		    {'williamboman/mason-lspconfig.nvim'},
+		    {'latex-lsp/texlab'},
 
 		    -- Autocompletion
 		    {'hrsh7th/nvim-cmp'},
@@ -85,6 +86,11 @@ return require('packer').startup(function(use)
         -- Trying these settings to get remote and treesitter working.
         require("flash").setup({})
     }
+
+    -- Latex
+    use {'lervag/vimtex'}
+
+
 
     -- Copilot
     -- use("github/copilot.vim")

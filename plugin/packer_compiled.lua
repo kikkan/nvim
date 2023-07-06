@@ -210,6 +210,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "C:\\Users\\kikka\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\vim-visual-multi",
     url = "https://github.com/mg979/vim-visual-multi"
+  },
+  vimtex = {
+    loaded = true,
+    path = "C:\\Users\\kikka\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\vimtex",
+    url = "https://github.com/lervag/vimtex"
   }
 }
 
