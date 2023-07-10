@@ -17,28 +17,28 @@ vim.keymap.set("n", "<C-u>", "<C-u>zz") -- page up/down
 vim.keymap.set("n", "n", "nzzzv")
 vim.keymap.set("n", "N", "Nzzzv")
 
-vim.keymap.set("n", "<leader>vwm", function()
-    require("vim-with-me").StartVimWithMe()
-end)
-vim.keymap.set("n", "<leader>svwm", function()
-    require("vim-with-me").StopVimWithMe()
-end)
+-- vim.keymap.set("n", "<leader>vwm", function()
+--     require("vim-with-me").StartVimWithMe()
+-- end)
+-- vim.keymap.set("n", "<leader>svwm", function()
+--     require("vim-with-me").StopVimWithMe()
+-- end)
 
 -- Stops yank to get overwritten
 vim.keymap.set("x", "<leader>p", [["_dP]])
 
 -- next greatest remap ever : asbjornHaland
-vim.keymap.set({"n", "v"}, "<leader>y", [["+y]])
+vim.keymap.set({ "n", "v" }, "<leader>y", [["+y]])
 vim.keymap.set("n", "<leader>Y", [["+Y]])
 
-vim.keymap.set({"n", "v"}, "<leader>d", [["_d]])
+vim.keymap.set({ "n", "v" }, "<leader>d", [["_d]])
 
 -- This is going to get me cancelled
 vim.keymap.set("i", "<C-c>", "<Esc>")
 
 vim.keymap.set("n", "Q", "<nop>")
 vim.keymap.set("n", "<C-f>", "<cmd>silent !tmux neww tmux-sessionizer<CR>")
-vim.keymap.set("n", "<leader>f", vim.lsp.buf.format)
+vim.keymap.set("n", "<A-f>", vim.lsp.buf.format)
 
 -- quickfix:
 --vim.keymap.set("n", "<C-k>", "<cmd>cnext<CR>zz")
@@ -67,7 +67,7 @@ vim.keymap.set("n", "<leader>nh", function() vim.cmd("nohlsearch") end) -- Remov
 vim.keymap.set("i", "<C-s>", "<Esc>:w<cr>")
 --vim.keymap.set("n", "<C-s>", "<cmd>w")
 --vim.keymap.set("n", "<C-s>", ":w<cr>")
-vim.keymap.set("n", "<C-s>", function ()
+vim.keymap.set("n", "<C-s>", function()
     vim.cmd("w")
 end)
 
@@ -77,8 +77,12 @@ vim.keymap.set("n", "<leader>ep", ":w<leader>!python")
 -- Visual block
 vim.keymap.set("n", "<leader>v", "<c-v>")
 
-
-
-
-
-
+-- Window resize
+-- vim.keymap.set("n", "<C-w-Up>", ":res +5 <CR>")
+-- vim.keymap.set("n", "<C-w-Down>", ":res -5 <CR>")
+-- vim.keymap.set("n", "<C-w-Right>", ":vertical res -5 <CR>")
+-- vim.keymap.set("n", "<C-w-Left>", ":vertical res +5 <CR>")
+vim.keymap.set("n", "<A-Up>", ":res +5 <CR>")
+vim.keymap.set("n", "<A-Down>", ":res -5 <CR>")
+vim.keymap.set("n", "<A-Right>", ":vertical res -5 <CR>")
+vim.keymap.set("n", "<A-Left>", ":vertical res +5 <CR>")

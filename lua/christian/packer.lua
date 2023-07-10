@@ -91,6 +91,13 @@ return require('packer').startup(function(use)
     use {'lervag/vimtex'}
 
 
+    -- Python
+    -- use 'MunifTanjim/nui.nvim'
+    -- use 'smzm/hydrovim'
+    use {'Vigemus/iron.nvim'}
+
+
+
 
     -- Copilot
     -- use("github/copilot.vim")

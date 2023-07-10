@@ -125,6 +125,11 @@ _G.packer_plugins = {
     path = "C:\\Users\\kikka\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\harpoon",
     url = "https://github.com/theprimeagen/harpoon"
   },
+  ["iron.nvim"] = {
+    loaded = true,
+    path = "C:\\Users\\kikka\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\iron.nvim",
+    url = "https://github.com/Vigemus/iron.nvim"
+  },
   ["lsp-zero.nvim"] = {
     loaded = true,
     path = "C:\\Users\\kikka\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\lsp-zero.nvim",
@@ -190,6 +195,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "C:\\Users\\kikka\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\telescope.nvim",
     url = "https://github.com/nvim-telescope/telescope.nvim"
+  },
+  texlab = {
+    loaded = true,
+    path = "C:\\Users\\kikka\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\texlab",
+    url = "https://github.com/latex-lsp/texlab"
   },
   undotree = {
     loaded = true,
