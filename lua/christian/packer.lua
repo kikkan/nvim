@@ -71,7 +71,7 @@ return require('packer').startup(function(use)
     -- Git status bar on the left side
     use 'airblade/vim-gitgutter'
 
-    -- Changes bottom informasjon bar "mode" "branch" etc.
+    -- Changes bottom information bar "mode" "branch" etc.
     use {
         'nvim-lualine/lualine.nvim',
         requires = { 'nvim-tree/nvim-web-devicons', opt = true }
