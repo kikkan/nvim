@@ -94,7 +94,8 @@ return require('packer').startup(function(use)
     -- Python
     -- use 'MunifTanjim/nui.nvim'
     -- use 'smzm/hydrovim'
-    use {'Vigemus/iron.nvim'}
+    -- use {'Vigemus/iron.nvim'}
+    use "jpalardy/vim-slime"
 
 
 
